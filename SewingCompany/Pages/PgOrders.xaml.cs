@@ -1,6 +1,7 @@
 ﻿using SewingCompany.Utilities;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -144,6 +145,13 @@ namespace SewingCompany.Pages
             {
                 MessageBox.Show("Раскрой возможен только для заказов со статусом \"Раскрой\"");
             }
+        }
+
+        private void SearchTBChanged(object sender, TextChangedEventArgs e)
+        {
+            string str = ((TextBox)sender).Text;
+            var dbList = Db.Conn.Order.Where(x => x.Id.ToString().Contains(str)).ToList();
+            DgOrders.ItemsSource = dbList;
         }
     }
 }

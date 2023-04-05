@@ -15,6 +15,7 @@
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal">
             <Button Name="BtnAddNewOrder" Content="Новый заказ" HorizontalAlignment="Left" Click="BtnAddNewOrder_Click"/>
+            <TextBox TextChanged="SearchTBChanged" Width="300"/>
         </StackPanel>
         
         <DataGrid Grid.Row="1" Name="DgOrders" IsReadOnly="True" AutoGenerateColumns="False" AlternationCount="2">

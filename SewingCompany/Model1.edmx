@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="user42Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="Хранилище user42EntitiesModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Fabric">
           <Key>
             <PropertyRef Name="Id" />
@@ -377,7 +377,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="user42ModelStoreContainer">
+        <EntityContainer Name="Хранилище user42EntitiesModelContainer">
           <EntitySet Name="Fabric" EntityType="Self.Fabric" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="FabricStock" EntityType="Self.FabricStock" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Furniture" EntityType="Self.Furniture" Schema="dbo" store:Type="Tables" />
@@ -476,7 +476,7 @@
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="user42Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="user42EntitiesModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="Fabric">
           <Key>
             <PropertyRef Name="Id" />
@@ -989,9 +989,9 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="user42ModelStoreContainer" CdmEntityContainer="user42Entities">
+        <EntityContainerMapping StorageEntityContainer="Хранилище user42EntitiesModelContainer" CdmEntityContainer="user42Entities">
           <EntitySetMapping Name="Fabric">
-            <EntityTypeMapping TypeName="user42Model.Fabric">
+            <EntityTypeMapping TypeName="user42EntitiesModel.Fabric">
               <MappingFragment StoreEntitySet="Fabric">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
@@ -1002,7 +1002,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="FabricStock">
-            <EntityTypeMapping TypeName="user42Model.FabricStock">
+            <EntityTypeMapping TypeName="user42EntitiesModel.FabricStock">
               <MappingFragment StoreEntitySet="FabricStock">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="IdFabric" ColumnName="IdFabric" />
@@ -1015,7 +1015,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Furniture">
-            <EntityTypeMapping TypeName="user42Model.Furniture">
+            <EntityTypeMapping TypeName="user42EntitiesModel.Furniture">
               <MappingFragment StoreEntitySet="Furniture">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
@@ -1025,7 +1025,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="FurnitureStock">
-            <EntityTypeMapping TypeName="user42Model.FurnitureStock">
+            <EntityTypeMapping TypeName="user42EntitiesModel.FurnitureStock">
               <MappingFragment StoreEntitySet="FurnitureStock">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="IdFurniture" ColumnName="IdFurniture" />
@@ -1038,7 +1038,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Order">
-            <EntityTypeMapping TypeName="user42Model.Order">
+            <EntityTypeMapping TypeName="user42EntitiesModel.Order">
               <MappingFragment StoreEntitySet="Order">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="IdUser" ColumnName="IdUser" />
@@ -1050,7 +1050,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="OrderItem">
-            <EntityTypeMapping TypeName="user42Model.OrderItem">
+            <EntityTypeMapping TypeName="user42EntitiesModel.OrderItem">
               <MappingFragment StoreEntitySet="OrderItem">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="IdOrder" ColumnName="IdOrder" />
@@ -1069,7 +1069,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="OrderState">
-            <EntityTypeMapping TypeName="user42Model.OrderState">
+            <EntityTypeMapping TypeName="user42EntitiesModel.OrderState">
               <MappingFragment StoreEntitySet="OrderState">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
@@ -1077,7 +1077,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Product">
-            <EntityTypeMapping TypeName="user42Model.Product">
+            <EntityTypeMapping TypeName="user42EntitiesModel.Product">
               <MappingFragment StoreEntitySet="Product">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Description" ColumnName="Description" />
@@ -1090,7 +1090,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Role">
-            <EntityTypeMapping TypeName="user42Model.Role">
+            <EntityTypeMapping TypeName="user42EntitiesModel.Role">
               <MappingFragment StoreEntitySet="Role">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
@@ -1098,7 +1098,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="ScrapRule">
-            <EntityTypeMapping TypeName="user42Model.ScrapRule">
+            <EntityTypeMapping TypeName="user42EntitiesModel.ScrapRule">
               <MappingFragment StoreEntitySet="ScrapRule">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="IdMaterial" ColumnName="IdMaterial" />
@@ -1108,7 +1108,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Unit">
-            <EntityTypeMapping TypeName="user42Model.Unit">
+            <EntityTypeMapping TypeName="user42EntitiesModel.Unit">
               <MappingFragment StoreEntitySet="Unit">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
@@ -1116,7 +1116,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="UnitConvert">
-            <EntityTypeMapping TypeName="user42Model.UnitConvert">
+            <EntityTypeMapping TypeName="user42EntitiesModel.UnitConvert">
               <MappingFragment StoreEntitySet="UnitConvert">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="IdUnit1" ColumnName="IdUnit1" />
@@ -1126,7 +1126,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="User">
-            <EntityTypeMapping TypeName="user42Model.User">
+            <EntityTypeMapping TypeName="user42EntitiesModel.User">
               <MappingFragment StoreEntitySet="User">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Login" ColumnName="Login" />
@@ -1152,7 +1152,7 @@
         <DesignerProperty Name="EnablePluralization" Value="false" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
         <DesignerProperty Name="UseLegacyProvider" Value="false" />
-        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
       </DesignerInfoPropertySet>
     </Options>
     <!-- Diagram content (shape and connector positions) -->

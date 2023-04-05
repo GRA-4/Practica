@@ -34,8 +34,12 @@ namespace SewingCompany.Pages
 
         private void FillAcceptedSupplyFilesList()
         {
-            string[] supplyFiles = Directory.GetFiles(@".\Storage\SupplyFiles\", "*.csv");
-            LbAcceptedsupplyFiles.ItemsSource = supplyFiles;
+            try
+            {
+                string[] supplyFiles = Directory.GetFiles(@".\Storage\SupplyFiles\", "*.csv");
+                LbAcceptedsupplyFiles.ItemsSource = supplyFiles;
+            }
+            catch { }
         }
 
         public string SupplyFileName = string.Empty;
